@@ -26,28 +26,25 @@ export default function ErrorPage() {
               404 • Page not found
             </p>
 
-                      <motion.h1
-            className="text-3xl sm:text-4xl font-black leading-snug bg-gradient-to-b from-white to-yellow-300 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{
-              opacity: 1,
-              y: [0, -4, 0],
-              textShadow: [
-                "0 0 0px rgba(250, 204, 21, 0.0)",
-                "0 0 16px rgba(250, 204, 21, 0.7)",
-                "0 0 0px rgba(250, 204, 21, 0.0)",
-              ],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            whileHover={{ scale: 1.03 }}
-          >
-            കൗതുകം ലേശം കൂടുതൽ ആണ് ഇല്ലേ?
-          </motion.h1>
-
+            {/* Animated main heading */}
+            <motion.h1
+              className="text-3xl sm:text-4xl font-black leading-snug bg-gradient-to-b from-white to-yellow-300 bg-clip-text text-transparent"
+              initial={{ opacity: 0, y: 10, scale: 0.94 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                scale: [1, 1.06, 1],
+                rotate: [0, -1.5, 1, 0],
+              }}
+              transition={{
+                duration: 2.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              whileHover={{ scale: 1.07 }}
+            >
+              കൗതുകം ലേശം കൂടുതൽ ആണ് ഇല്ലേ?
+            </motion.h1>
 
             <div className="mt-4 space-y-1">
               <h2 className="text-lg sm:text-xl font-semibold text-white/90">
@@ -58,6 +55,7 @@ export default function ErrorPage() {
               </p>
             </div>
 
+            {/* Buttons with SVG icons */}
             <div className="mt-8 flex flex-wrap gap-4 justify-center">
               <motion.a
                 href="/"
@@ -65,7 +63,21 @@ export default function ErrorPage() {
                 whileTap={{ scale: 0.97 }}
                 className="px-6 sm:px-8 py-3 bg-white text-black rounded-full text-sm sm:text-base font-semibold shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
               >
-                <span className="w-2 h-2 rounded-full bg-black" />
+                <span className="w-4 h-4 flex items-center justify-center">
+                  {/* Home icon */}
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M3 11L12 3l9 8" />
+                    <path d="M5 10v10h5v-6h4v6h5V10" />
+                  </svg>
+                </span>
                 <span>Back to Home</span>
               </motion.a>
 
@@ -75,7 +87,21 @@ export default function ErrorPage() {
                 whileTap={{ scale: 0.97 }}
                 className="px-6 sm:px-8 py-3 bg-white/10 hover:bg-white/20 rounded-full text-sm sm:text-base font-semibold text-white shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
               >
-                <span className="w-2 h-2 rounded-full border border-white" />
+                <span className="w-4 h-4 flex items-center justify-center">
+                  {/* Arrow-back icon */}
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M15 18l-6-6 6-6" />
+                    <path d="M9 12h10" />
+                  </svg>
+                </span>
                 <span>Previous Page</span>
               </motion.button>
             </div>
