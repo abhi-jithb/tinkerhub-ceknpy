@@ -9,6 +9,7 @@ import ProjectsPage from "./pages/ProjectPage.jsx";
 import TopMakersPage from "./pages/TopMakersPage.jsx";
 import MakerProfilePage from "./pages/MakerProfilePage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import Demo from "./pages/ErrorPage.jsx";
 
 function Placeholder({ title }) {
   return (
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/top-makers" element={<TopMakersPage />} />
         <Route path="/top-makers/:id" element={<MakerProfilePage   />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<Demo /> } />
       </Routes>
     </Layout>
   );
