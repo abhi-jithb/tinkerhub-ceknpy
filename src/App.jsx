@@ -5,6 +5,10 @@ import HomePage from "./pages/HomePage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import TeamPage from "./pages/TeamPage.jsx";
 import EventsPage from "./pages/EventsPage.jsx";
+import ProjectsPage from "./pages/ProjectPage.jsx";
+import TopMakersPage from "./pages/TopMakersPage.jsx";
+import MakerProfilePage from "./pages/MakerProfilePage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
 
 function Placeholder({ title }) {
   return (
@@ -25,9 +29,10 @@ export default function App() {
         <Route path="/about" element={<AboutPage  />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/events" element={<EventsPage />} />
-        <Route path="/projects" element={<Placeholder title="Projects" />} />
-        <Route path="/top-makers" element={<Placeholder title="Top Makers" />} />
-        <Route path="/contact" element={<Placeholder title="Contact / Join" />} />
+        <Route path="/projects" element={<ProjectsPage/>} />
+        <Route path="/top-makers" element={<TopMakersPage />} />
+        <Route path="/top-makers/:id" element={<MakerProfilePage   />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Layout>
   );
