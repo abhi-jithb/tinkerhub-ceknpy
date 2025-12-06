@@ -16,10 +16,12 @@ export default function Navbar() {
 
   const linkBase =
     "block px-3 py-2 text-sm rounded-full transition hover:text-thPurple";
+    
+  const mobileLinkBase = "block px-4 py-3 text-base transition-colors";
 
   return (
-    <header className="w-full border-b border-gray-100 bg-white/70 backdrop-blur z-20 sticky top-0">
-      <nav className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+    <header className="w-full border-b border-gray-100 bg-white z-20 sticky top-0">
+      <nav className="max-w-5xl mx-auto px-4 py-2 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="w-7 h-7 rounded-xl bg-gradient-to-tr from-thGreen via-thCyan to-thPurple" />
@@ -74,19 +76,19 @@ export default function Navbar() {
 
       {/* Mobile menu panel */}
       <div
-        className={`sm:hidden border-t border-gray-100 bg-white/95 backdrop-blur transform transition-transform duration-200 origin-top ${
-          open ? "scale-y-100" : "scale-y-0"
+        className={`sm:hidden bg-white border-t border-gray-100 transition-all duration-200 overflow-hidden ${
+          open ? 'max-h-screen' : 'max-h-0'
         }`}
       >
-        <div className="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-1 text-sm text-gray-700">
+        <div className="px-4 py-2">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `${linkBase} ${
-                  isActive ? "text-thPurple font-medium bg-thLight" : ""
+                `block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-md transition-colors ${
+                  isActive ? 'text-thPurple font-medium' : ''
                 }`
               }
               end={item.to === "/"}
