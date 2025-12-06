@@ -15,12 +15,12 @@ export default function TeamPage() {
         <p className="text-sm text-gray-700 mb-2">
           The core team keeps the learning spaces active, inclusive, and aligned
           with TinkerHub&apos;s campus structure, with clear roles for leading
-          study jams, outreach, WIT, and first-year onboarding. [web:60][web:64]
+          study jams, outreach, WIT, and first-year onboarding.
         </p>
         <p className="text-sm text-gray-700">
           Names and roles are synced with the official TinkerHub CEK campus
           page so that future teams can update it once and keep this site in
-          sync. [web:12]
+          sync.
         </p>
       </section>
 
@@ -45,7 +45,7 @@ export default function TeamPage() {
             tinkerhub.org/campus/2607/
           </a>{" "}
           and map those roles into this layout, so each new batch only has to
-          update details in one place. [web:12]
+          update details in one place.
         </p>
       </section>
     </div>
