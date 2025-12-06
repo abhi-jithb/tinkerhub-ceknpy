@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
+import TeamPage from "./pages/TeamPage.jsx";
+import EventsPage from "./pages/EventsPage.jsx";
 
 function Placeholder({ title }) {
   return (
@@ -21,8 +23,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage  />} />
-        <Route path="/team" element={<Placeholder title="Team" />} />
-        <Route path="/events" element={<Placeholder title="Events" />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/events" element={<EventsPage />} />
         <Route path="/projects" element={<Placeholder title="Projects" />} />
         <Route path="/top-makers" element={<Placeholder title="Top Makers" />} />
         <Route path="/contact" element={<Placeholder title="Contact / Join" />} />
